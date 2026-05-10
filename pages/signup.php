@@ -50,6 +50,9 @@ include 'includes/components/header.php';
             <div class="form-group">
                 <label class="form-label" for="password">Password</label>
                 <input type="password" id="password" class="form-control" required placeholder="••••••••">
+                <small style="color: var(--text-muted); font-size: 0.75rem; margin-top: 6px; display: block;">
+                    Min 8 chars · uppercase · lowercase · number · symbol (!@#$%)
+                </small>
             </div>
             
             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Sign Up</button>
@@ -66,10 +69,18 @@ $pageScripts = "
 document.getElementById('signupForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
     const submitBtn = e.target.querySelector('button[type=\"submit\"]');
+
+    // Strong password validation
+    const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%^&*()_+\-=\[\]{};':\"\\\\|,.<>\/?]).{8,}$/;
+
+    if (!strongPassword.test(password)) {
+        App.showToast('Password must be at least 8 characters and include uppercase, lowercase, number, and symbol (e.g. Test@123)', 'error');
+        return;
+    }
     
     try {
         submitBtn.disabled = true;
