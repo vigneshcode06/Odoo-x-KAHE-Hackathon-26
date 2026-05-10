@@ -9,14 +9,14 @@
   <img src="https://img.shields.io/badge/PHP-8.2-blue.svg?style=for-the-badge&logo=php" alt="PHP Version">
   <img src="https://img.shields.io/badge/MySQL-8.0-orange.svg?style=for-the-badge&logo=mysql" alt="MySQL Version">
   <img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg?style=for-the-badge&logo=docker" alt="Docker">
-  <img src="https://img.shields.io/badge/UI-Glassmorphism-FF69B4.svg?style=for-the-badge" alt="UI Style">
+
 </p>
 
 ---
 
 ## 🚀 Vision
 
-**Traveloop** was engineered for the 2026 Hackathon to solve the complexities of group and solo travel. It combines high-performance backend architecture with a cutting-edge **Glassmorphism UI** to deliver a seamless user experience. From intelligent financial analytics to dynamic itinerary sequencing, Traveloop is the future of travel management.
+**Traveloop** was engineered for the 2026 Hackathon to solve the complexities of group and solo travel. It combines high-performance backend architecture with a cutting-edge  to deliver a seamless user experience. From intelligent financial analytics to dynamic itinerary sequencing, Traveloop is the future of travel management.
 
 ---
 
@@ -59,12 +59,7 @@
 - **Data Integrity**: Transactional database operations to ensure consistency during complex deletions.
 - **Sanitized Inputs**: Comprehensive input validation and XSS prevention.
 
-### 🎨 Design System
-- **Glassmorphism UI**: High-end aesthetic featuring backdrop blurs, subtle borders, and soft shadows.
-- **Micro-Animations**: Smooth page transitions, hover lifts, and interactive toast notifications.
-- **Skeleton States**: Elegant loading indicators for a faster perceived performance.
 
----
 
 ## 📦 Getting Started
 
@@ -105,7 +100,7 @@ The system leverages a high-availability MySQL 8.0 configuration, automatically 
 
 ```text
 ├── api/routes/      # High-performance RESTful API endpoints
-├── assets/          # Glassmorphism design system & JS logic
+├── assets/          # design system & JS logic
 ├── config/          # Environment & Database configurations
 ├── includes/        # Shared components & Security middleware
 ├── pages/           # Dynamic frontend templates
